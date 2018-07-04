@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <app-col-pnl [alTyp]="cmnAlTyp"></app-col-pnl>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <app-btn-pnl (alChng)="cmnAlTyp = $event"></app-btn-pnl>
+  </div>
+</div>

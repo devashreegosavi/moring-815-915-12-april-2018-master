@@ -1,0 +1,73 @@
+<form class="form-horizontal" (ngSubmit)="onSub(frm)" #frm="ngForm">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>This is Template Driven Form</legend>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">First name</label>
+      <div class="col-md-4">
+        <input 
+          name="usNm" 
+          type="text" 
+          placeholder="John" 
+          class="form-control input-md"
+          [(ngModel)]="myObj.usNm"
+          required
+          #usNm="ngModel">
+      </div>
+      <label class="col-md-4 control-label text-muted" *ngIf="!usNm.valid">Enter your name</label>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="email">E-mail</label>
+      <div class="col-md-4">
+        <input 
+          name="eml" 
+          type="text" 
+          placeholder="john.smith@mail.com" 
+          class="form-control input-md"
+          [(ngModel)]="myObj.eml"
+          required
+          #eml="ngModel">
+      </div>
+      <label class="col-md-4 control-label text-muted" *ngIf="!eml.valid">Enter your email id</label>
+      <label class="col-md-4 control-label text-muted" >Check your email pattern</label>
+    </div>
+
+    <!-- Password input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="passwordinput">Password</label>
+      <div class="col-md-4">
+        <input 
+          name="pass" 
+          type="password" 
+          placeholder="Enter your password" 
+          class="form-control input-md"
+          [(ngModel)]="myObj.pass"
+          required
+          #pass="ngModel">
+      </div>
+      <label class="col-md-4 control-label text-muted" *ngIf="!pass.valid">Enter your password</label>
+    </div>
+    
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="singlebutton"></label>
+      <div class="col-md-4">
+        <button  type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+
+<div class="row">
+  <div class="col-md-12">
+    <ol>
+      <li *ngFor="let rg of arrRegs"><a routerLink="">{{rg.userName}} </a></li>
+    </ol>
+  </div>
+</div>

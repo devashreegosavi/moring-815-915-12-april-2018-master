@@ -1,0 +1,18 @@
+
+<div class="row">
+  <div class="col-md-8">
+    <input type="text" #myNm>
+  </div>
+  <div class="col-md-4">
+    {{typed}}
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="col-md-6">
+    <ng-content></ng-content>
+  </div>
+  <div class="col-md-6">
+    <input type="button" class="btn btn-primary" value="Okay" (click)="smtngTypd(myNm.value)">
+  </div>
+</div>

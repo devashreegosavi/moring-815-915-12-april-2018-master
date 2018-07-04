@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-12">
+    <p> {{nm | uppercase }} </p>
+    <p> {{nm | uppercase | slice:2:4  }} </p>
+    <p> {{dt | date:"dd-MM-yyyy"}}</p> 
+    <p> {{nm | reverse | uppercase}}</p> 
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <input type="text" [(ngModel)]="qry">
+  </div>
+  <div class="col-md-6">
+    <input type="text" #dtSub>
+    <input type="button" value="Add" class="btn btn-primary" (click)="onBtn(dtSub.value)">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ol>
+      <li *ngFor="let sub of (subs | filter:qry)">{{sub}}</li>
+    </ol>    
+  </div>
+</div>

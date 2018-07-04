@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12">
+    <p>
+      http-observables works! {{cntr}}
+    </p>
+    <p>
+      Post code is {{postCode?.result?.postcode}}
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <textarea rows="7" cols="100" [(ngModel)]="fileTxt"></textarea>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    
+    <input type="button" value="Save" (click)="onSave()">
+  </div>
+</div>

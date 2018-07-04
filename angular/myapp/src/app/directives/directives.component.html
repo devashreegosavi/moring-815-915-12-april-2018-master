@@ -1,0 +1,57 @@
+<!-- <div class="row">
+  <div class="col-md-12" [ngClass]="{card : false, jumbotron: true  }">
+    <h1 class="text-muted">Welcome codekul.com</h1>    
+  </div>
+</div>
+<div class="row" [ngStyle]="myStl">
+  <div class="col-md-12" [ngStyle]="{border : '1px solid red'}">
+    <h1>CodeKul.com training in pune</h1>
+  </div>
+</div> -->
+<div class="row" >
+  <div class="col-md-12" >
+    <input type="text" [ckSizer]="'500px'">
+  </div>
+</div>
+<div class="row" *ngIf="false">
+  <div class="col-md-12" >
+    <input type="text" [ckSizer]="'500px'">
+  </div>
+</div>
+<ng-template [ngIf]="true">
+  <div class="col-md-12" >
+    <input type="text" [ckSizer]="'500px'">
+  </div>
+</ng-template>
+<div class="row" *ngFor="let mb of mobs">
+  <div class="col-md-12">
+    {{mb.val}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ol>
+      <li *ngFor="let mb of mobs;let ind = index;">
+        <div *ngIf="mb.val=='Android'">{{mb.val}}</div>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div> <input type="text" [(ngModel)]="num"></div>
+    <div [ngSwitch]="num">
+      <div *ngSwitchCase="'1'">One</div>
+      <div *ngSwitchCase="'2'">Two</div>
+      <div *ngSwitchCase="'3'">Three</div>
+      <div *ngSwitchCase="'4'">Four</div>
+      <div *ngSwitchDefault >No Number</div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div *myStr="false"> Hi this is unless</div>
+  </div>
+</div>
+<app-navbar></app-navbar>

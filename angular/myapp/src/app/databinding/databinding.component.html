@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-12">
+    <p>Android is {{status}}</p>
+    <p>Android is {{status.toUpperCase()}}</p>
+    <p>Android is {{78*89}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p><input type="{{tp}}"></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" [class.card]="isCard">
+    <p><input [type]="'button'"></p>
+    <p><input [type]="tp"></p>
+    <p><input [style.border]="'1px solid red'"></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" >
+    <p><input (click)="btnClk()" type="button" value="okay" class="btn btn-primary"></p>
+    <p>Date is {{dt}}</p>
+    <p><input (click)="isCard = !isCard" type="button" value="Card It" class="btn btn-info"></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" >
+    <p><input type="text" [(ngModel)]="myNm"></p>
+    <p>My Name is {{myNm}}</p>
+  </div>
+</div>
